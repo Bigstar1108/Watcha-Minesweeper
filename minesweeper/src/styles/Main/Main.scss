@@ -30,6 +30,28 @@
 
 .MainAwardBoard{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
     height: 70%;
+    span{
+        font-size: 25px;
+        font-weight: bold;
+    }
+};
+
+.MainAwardTitle{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.AwardItem{
+    margin-top: 15px;
+    span{
+        font-size: 20px;
+        font-weight: normal;
+    }
 }
