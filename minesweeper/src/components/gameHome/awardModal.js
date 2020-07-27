@@ -29,7 +29,7 @@ const AwardModal = () => {
             localStorage.setItem("award", JSON.stringify(awards));
         };
         alert(`랭킹에 ${name}님이 등재되었습니다.`);
-        history.push('/');
+        history.push('/Watcha-Minesweeper/');
     }
 
     return(

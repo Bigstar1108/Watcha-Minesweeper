@@ -30,7 +30,7 @@ const Main = () => {
         <div className = "MainContainer">
             <div className = "MainLogo">
                 <span>Minesweeper💣</span>
-                <button type = "button" onClick = {() => history.push('/minesweeper')}>게임 시작!</button>
+                <button type = "button" onClick = {() => history.push('/Watcha-Minesweeper/minesweeper')}>게임 시작!</button>
             </div>
 
             <div className = "MainAwardBoard">
