@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const GameHeader = ({time, mines, handleRestartGame}) => {
     return(
-        <div>
-            <p>남은 지뢰 : {mines}</p>
-            <p>Time : {time}</p>
+        <div className = "GameHeader">
+            <span>남은 지뢰 : {mines}</span>
+            <span>Time : {time}</span>
             <button type = "button" onClick = {() => handleRestartGame()}>다시 시작하기</button>
         </div>
     );
