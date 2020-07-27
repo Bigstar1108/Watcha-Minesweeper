@@ -7,9 +7,9 @@ const GamePopup = ({ popupText, handleCreateMines }) => {
     if(popupText !== ''){
         popUpContainer = 
         <div className = "popup-container">
-            <a onClick={(event) => {event.preventDefault(); handleCreateMines();}}>
+            <span onClick = {() => handleCreateMines()}>
                 {popupText}
-            </a>
+            </span>
         </div>
     }
     return(
@@ -17,6 +17,16 @@ const GamePopup = ({ popupText, handleCreateMines }) => {
             {popUpContainer}
         </div>
     );
+};
+
+GamePopup.propTypes = {
+    popupText: PropTypes.string,
+    handleCreateMines: PropTypes.func,
+};
+
+GamePopup.defaultProps = {
+    popupText: '',
+    handleCreateMines: () => console.warn('handleCreateMines not defined'),
 };
 
 export default GamePopup;
