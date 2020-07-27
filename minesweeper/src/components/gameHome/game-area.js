@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as actions from '../../modules/actions';
 import PropTypes from 'prop-types';
 import { boxValue } from '../../lib';
@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 const GameArea = () => {
     const { opened, boxs, isStopGame } = useSelector((state) => state.Minesweeper);
+    const [ toggleTimer, settoggleTimer ] = useState(false); //false시 타이머 멈춤, true시 타이머 시작
     const dispatch = useDispatch();
 
     const handleUpdateBox = (obj, num) => dispatch(actions.updateBox(obj, num));
@@ -69,27 +70,30 @@ const GameArea = () => {
         }
     };
 
-    // 게임 시작 시 타임 시작
-    const startGameTime = () => {
-        handleStartTime();
+    useEffect(() => {
+        let interval = null;
+        if(toggleTimer){
+            handleStartTime();
 
-        // setinterval 함수 안에서 this는 window를 가리키므로 화살표함수를 써줘야 함
-
-        let interval = setInterval(() => {
-          handleStartTime();
-
-          if(opened >= 53 || isStopGame === true){
+            let interval = setInterval(() => {
+                handleStartTime();
+            }, 1000);
+            if(opened >= 53 || isStopGame === true){
+                console.log("stop");
+                clearInterval(interval);
+            };
+            return () => clearInterval(interval);
+        }else{
             clearInterval(interval);
-          }
-        }, 1000);
-    }
-
+            return () => clearInterval(interval);
+        }
+    }, [toggleTimer]);
 
     // box를 클릭했을 때 처리
     const handleClickBox = (key) => {
         // 첫 box를 눌렀을 때만 startGameTime을 실행해야하기 때문에 필요한 조건문
         if(opened === 0 && isStopGame === false){
-            startGameTime();
+            settoggleTimer(true);
         }
 
         if(boxs[key].text !== '⚑' && boxs[key].isFirst === true && isStopGame === false){
@@ -105,12 +109,14 @@ const GameArea = () => {
 
             //box의 상태가 지뢰(9)일 때
             if(boxs[key].isState === 9){
+                settoggleTimer(false);
                 handleGameOver(key);
             }
         }
 
         //열린 box의 개수가 53개일 때 (8 * 8 - 10 = 54이지만 ++opened를 해줬으므로 -1)
         if(opened >= 53){
+            settoggleTimer(false);
             handleFinishGame();
         }
     }
@@ -147,6 +153,7 @@ GameArea.propTypes = {
     opened: PropTypes.number,
     boxs: PropTypes.object,
     isStopGame: PropTypes.bool,
+    toggleTimer: PropTypes.bool,
     handleCreateFlag: PropTypes.func,
     handleDeleteFlag: PropTypes.func,
     handleClickNumber: PropTypes.func,
@@ -160,6 +167,7 @@ GameArea.defaultProps = {
     opened: 0,
     boxs: {},
     isStopGame: false,
+    toggleTimer: false,
     handleCreateFlag: () => console.warn('handleCreateFlag not defined'),
     handleDeleteFlag: () => console.warn('handleDeleteFlag not defined'),
     handleClickNumber: () => console.warn('handleClickNumber not defined'),
