@@ -10,7 +10,7 @@ const initialState = {
     isStopGame: false,
 };
 
-export default function minesweeper(state = initialState, action){
+export default function Minesweeper(state = initialState, action){
     switch(action.type){
         case actions.CREATE_MINE:
             return update(state, {
