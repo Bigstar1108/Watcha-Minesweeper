@@ -1,6 +1,6 @@
 # Watcha-Minesweeper (왓챠 웹 프론트엔드 개발자 과제입니다.)
 
-[Watcha-Minesweeper]보러가기(https://bigstar1108.github.io/Watcha-Minesweeper/)
+[Watcha-Minesweeper보러가기](https://bigstar1108.github.io/Watcha-Minesweeper/)
 
 개발 기간: 2020.07.27 ~ 2020.07.28 (24시간 과제)
 
