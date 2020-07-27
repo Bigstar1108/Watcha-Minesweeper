@@ -12,7 +12,7 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path = '/Watcha-Minesweeper/' component = {Main} />
-          <Route exact path = '/Watcha-Minesweeper/minesweeper' component = {GameHome} />
+          <Route exact path = '/minesweeper' component = {GameHome} />
         </Switch>
         <Footer />
       </BrowserRouter>
