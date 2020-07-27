@@ -25,7 +25,7 @@ const GameHome = () => {
     }, [])
 
     return(
-        <div className = "gameHomeContainer">
+        <div className = "GameHome">
             <GameHeader
                 time = {time}
                 mines = {mines}
@@ -33,7 +33,6 @@ const GameHome = () => {
             />
             <GameArea />
             <GamePopup
-                time = {time}
                 popupText = {popupText}
                 handleCreateMines = {handleCreateMines}
             />
