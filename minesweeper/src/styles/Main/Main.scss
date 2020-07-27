@@ -1,0 +1,35 @@
+.MainContainer{
+    display: flex;
+    width: 100vw;
+    height : 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MainLogo{
+    display: flex;
+    width: 90%;
+    height: 30%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1.5px;
+    border-bottom-color: #f2f2f7;
+    span{
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    };
+    button{
+        width: 100px;
+        height : 35px;
+        margin-bottom: 20px;
+    };
+};
+
+.MainAwardBoard{
+    display: flex;
+    width: 90%;
+    height: 70%;
+}
