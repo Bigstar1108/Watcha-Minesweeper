@@ -3,7 +3,6 @@ html{
   }
   
   body{
-    height:100%;
     text-align: center;
   }
   
@@ -13,12 +12,12 @@ html{
     padding-bottom:0px;
   }
   
-  #container{
+  .container{
     width:176px;
     margin:20px auto;
   }
   
-  #container:after { 
+  .container:after { 
      content: "."; 
      visibility: hidden; 
      display: block; 
