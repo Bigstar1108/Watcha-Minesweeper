@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Watcha-Minesweeper/static/css/main.2ac5582f.chunk.css",
-    "main.js": "/Watcha-Minesweeper/static/js/main.f14d8b82.chunk.js",
-    "main.js.map": "/Watcha-Minesweeper/static/js/main.f14d8b82.chunk.js.map",
+    "main.js": "/Watcha-Minesweeper/static/js/main.fc199f23.chunk.js",
+    "main.js.map": "/Watcha-Minesweeper/static/js/main.fc199f23.chunk.js.map",
     "runtime-main.js": "/Watcha-Minesweeper/static/js/runtime-main.be55ee68.js",
     "runtime-main.js.map": "/Watcha-Minesweeper/static/js/runtime-main.be55ee68.js.map",
     "static/js/2.10ea52f4.chunk.js": "/Watcha-Minesweeper/static/js/2.10ea52f4.chunk.js",
     "static/js/2.10ea52f4.chunk.js.map": "/Watcha-Minesweeper/static/js/2.10ea52f4.chunk.js.map",
     "index.html": "/Watcha-Minesweeper/index.html",
-    "precache-manifest.a4e160a015c4e2626d02b9805bc66715.js": "/Watcha-Minesweeper/precache-manifest.a4e160a015c4e2626d02b9805bc66715.js",
+    "precache-manifest.ecd277b468018ce57c87fab74ec603a7.js": "/Watcha-Minesweeper/precache-manifest.ecd277b468018ce57c87fab74ec603a7.js",
     "service-worker.js": "/Watcha-Minesweeper/service-worker.js",
     "static/css/main.2ac5582f.chunk.css.map": "/Watcha-Minesweeper/static/css/main.2ac5582f.chunk.css.map",
     "static/js/2.10ea52f4.chunk.js.LICENSE.txt": "/Watcha-Minesweeper/static/js/2.10ea52f4.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.be55ee68.js",
     "static/js/2.10ea52f4.chunk.js",
     "static/css/main.2ac5582f.chunk.css",
-    "static/js/main.f14d8b82.chunk.js"
+    "static/js/main.fc199f23.chunk.js"
   ]
 }
