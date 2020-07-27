@@ -60,10 +60,12 @@ const GameArea = () => {
     // 오른쪽 클릭시 깃발 toggle
     const handleFlag = (key) => {
         if(isStopGame === false){
-            handleCreateFlag(key);
-        }
-        else if(boxs[key].text === '⚑'){
-            handleDeleteFlag(key);
+            if(boxs[key].text === ''){
+                handleCreateFlag(key);
+            }
+            else if(boxs[key].text === '⚑'){
+                handleDeleteFlag(key);
+            }
         }
     };
 
@@ -71,14 +73,17 @@ const GameArea = () => {
     const startGameTime = () => {
         handleStartTime();
 
-        let interval = setInterval(() => {
-            handleStartTime();
+        // setinterval 함수 안에서 this는 window를 가리키므로 화살표함수를 써줘야 함
 
-            if(opened >= 53 || isStopGame === true){
-                clearInterval(interval);
-            }
+        let interval = setInterval(() => {
+          handleStartTime();
+
+          if(opened >= 53 || isStopGame === true){
+            clearInterval(interval);
+          }
         }, 1000);
     }
+
 
     // box를 클릭했을 때 처리
     const handleClickBox = (key) => {
