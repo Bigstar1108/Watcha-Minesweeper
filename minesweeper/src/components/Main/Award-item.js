@@ -1,8 +1,10 @@
 import React from 'react';
 
-const AwardItem = () => {
+const AwardItem = ({ name, time}) => {
   return(
-    <div></div>
+    <div className = "AwardItem">
+      <span>🎉 <b>걸린 시간:</b> {time}, <b>이름:</b> {name}</span>
+    </div>
   );
 }
 
