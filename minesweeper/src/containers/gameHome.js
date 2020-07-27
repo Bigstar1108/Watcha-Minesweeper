@@ -3,8 +3,8 @@ import * as actions from '../modules/actions';
 import { setRandomMines } from '../lib';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import '../App.css';
 
+import '../styles/gameHome/gameHome.scss';
 import GameHeader from '../components/gameHome/game-header';
 import GameArea from '../components/gameHome/game-area';
 import GamePopup from '../components/gameHome/game-popup';
@@ -25,7 +25,7 @@ const GameHome = () => {
     }, [])
 
     return(
-        <div>
+        <div className = "gameHomeContainer">
             <GameHeader
                 time = {time}
                 mines = {mines}
