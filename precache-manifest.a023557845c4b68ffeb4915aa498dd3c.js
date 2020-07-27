@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f226f5e1e89a52dd58ceaf57b9ca380",
+    "revision": "5ffca68e7f9e9ac835e33ea69eff843a",
     "url": "/Watcha-Minesweeper/index.html"
   },
   {
-    "revision": "7ff743801688a06349ca",
+    "revision": "1a26e212d1b0fc00095b",
     "url": "/Watcha-Minesweeper/static/css/main.f4493637.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Watcha-Minesweeper/static/js/2.3b01b715.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7ff743801688a06349ca",
-    "url": "/Watcha-Minesweeper/static/js/main.82673afd.chunk.js"
+    "revision": "1a26e212d1b0fc00095b",
+    "url": "/Watcha-Minesweeper/static/js/main.9932c5cb.chunk.js"
   },
   {
     "revision": "e0da99cff06cb41d1f99",
