@@ -95,7 +95,7 @@ export default function Minesweeper(state = initialState, action){
 
         case actions.FINISH_GAME:
             return update(state, {
-                'popupText': {$set: '지뢰 찾기 클리어! 한판 더 하실래요?'},
+                'popupText': {$set: '지뢰 찾기 클리어! 랭킹에 등록해보세요!'},
                 'isStopGame': {$set: true},
             });
 
