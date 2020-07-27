@@ -1,10 +1,19 @@
 import React from 'react';
-import GameHome from './containers/gameHome';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <GameHome />
+import Main from './containers/Main';
+import GameHome from './containers/gameHome';
+import './App.scss';
+
+const App = () => {
+  return(
+    <div className = "rootDiv">
+      <BrowserRouter>
+        <Switch>
+          <Route exact path = '/' component = {Main} />
+          <Route exact path = '/minesweeper' component = {GameHome} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
